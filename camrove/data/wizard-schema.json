@@ -1,0 +1,137 @@
+{
+  "version": "1.0",
+  "steps": [
+    {
+      "id": "q1",
+      "title": "Welcome to CamRove!",
+      "description": "Let's set up your professional profile",
+      "field": {
+        "name": "role",
+        "type": "radio",
+        "label": "What best describes you?",
+        "options": [
+          { "value": "freelancer", "label": "Freelancer" },
+          { "value": "studio", "label": "Studio" },
+          { "value": "agency", "label": "Agency" }
+        ],
+        "required": true,
+        "validation": {
+          "required": "Please select your role"
+        }
+      },
+      "nextStep": {
+        "freelancer": "q2a",
+        "studio": "q2b", 
+        "agency": "q2b"
+      }
+    },
+    {
+      "id": "q2a",
+      "title": "Experience Level",
+      "description": "Tell us about your experience",
+      "field": {
+        "name": "experience_level", 
+        "type": "select",
+        "label": "How much experience do you have?",
+        "options": [
+          { "value": "fresher", "label": "Fresher (0-1 years)" },
+          { "value": "1-3", "label": "1-3 years" },
+          { "value": "3-7", "label": "3-7 years" },
+          { "value": "7-10", "label": "7-10 years" },
+          { "value": "10+", "label": "10+ years" }
+        ],
+        "required": true
+      },
+      "nextStep": "q3"
+    },
+    {
+      "id": "q2b", 
+      "title": "Team Size",
+      "description": "Tell us about your team",
+      "field": {
+        "name": "team_size",
+        "type": "select",
+        "label": "How many people in your team?",
+        "options": [
+          { "value": "solo", "label": "Solo" },
+          { "value": "2-3", "label": "2-3 people" },
+          { "value": "4-6", "label": "4-6 people" },
+          { "value": "7+", "label": "7+ people" }
+        ],
+        "required": true
+      },
+      "nextStep": "q3"
+    },
+    {
+      "id": "q3",
+      "title": "Services Offered",
+      "description": "What services do you provide?",
+      "field": {
+        "name": "services_offered",
+        "type": "multiselect",
+        "label": "Select your primary services",
+        "options": [
+          { "value": "wedding_photography", "label": "Wedding Photography" },
+          { "value": "portrait_photography", "label": "Portrait Photography" },
+          { "value": "event_photography", "label": "Event Photography" },
+          { "value": "wedding_videography", "label": "Wedding Videography" },
+          { "value": "corporate_video", "label": "Corporate Videos" },
+          { "value": "photo_editing", "label": "Photo Editing" },
+          { "value": "video_editing", "label": "Video Editing" }
+        ],
+        "required": true,
+        "maxSelections": 5
+      },
+      "nextStep": "q4"
+    },
+    {
+      "id": "q4",
+      "title": "Equipment",
+      "description": "What equipment do you own?",
+      "field": {
+        "name": "equipment",
+        "type": "multiselect", 
+        "label": "Select equipment you have",
+        "options": [
+          { "value": "dslr_camera", "label": "DSLR Camera" },
+          { "value": "mirrorless_camera", "label": "Mirrorless Camera" },
+          { "value": "drone", "label": "Drone" },
+          { "value": "gimbal", "label": "Gimbal Stabilizer" },
+          { "value": "lighting_equipment", "label": "Lighting Equipment" },
+          { "value": "audio_gear", "label": "Audio Recording Gear" },
+          { "value": "green_screen", "label": "Green Screen" },
+          { "value": "studio_space", "label": "Studio Space" }
+        ]
+      },
+      "nextStep": "q5"
+    },
+    {
+      "id": "q5",
+      "title": "Service Area",
+      "description": "Where do you provide services?",
+      "field": {
+        "name": "base_locality",
+        "type": "select",
+        "label": "Your base location in Kolkata",
+        "options": [
+          { "value": "entire_kolkata", "label": "Entire Kolkata" },
+          { "value": "south_kolkata", "label": "South Kolkata" },
+          { "value": "north_kolkata", "label": "North Kolkata" },
+          { "value": "salt_lake", "label": "Salt Lake" },
+          { "value": "howrah", "label": "Howrah" },
+          { "value": "new_town", "label": "New Town" }
+        ],
+        "required": true
+      },
+      "nextStep": "q6"
+    }
+  ],
+  "databaseMapping": {
+    "role": "profiles.role",
+    "experience_level": "profiles.experience_level", 
+    "team_size": "profiles.team_size",
+    "services_offered": "profiles.services_offered",
+    "equipment": "profiles.equipment",
+    "base_locality": "profiles.base_locality"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "categories": [
+    {
+      "id": "photography",
+      "name": "Photography",
+      "subcategories": [
+        {
+          "id": "wedding",
+          "name": "Wedding Photography",
+          "services": [
+            {"id": "pre_wedding", "name": "Pre-Wedding Shoot", "base_price": 15000},
+            {"id": "wedding_day", "name": "Wedding Day Coverage", "base_price": 30000},
+            {"id": "cinematic", "name": "Cinematic Wedding", "base_price": 50000}
+          ]
+        },
+        {
+          "id": "portrait",
+          "name": "Portrait Photography", 
+          "services": [
+            {"id": "individual", "name": "Individual Portraits", "base_price": 5000},
+            {"id": "family", "name": "Family Portraits", "base_price": 8000},
+            {"id": "maternity", "name": "Maternity Shoot", "base_price": 10000}
+          ]
+        },
+        {
+          "id": "fashion",
+          "name": "Fashion Photography",
+          "services": [
+            {"id": "model_portfolio", "name": "Model Portfolio", "base_price": 12000},
+            {"id": "product_fashion", "name": "Product Fashion", "base_price": 15000}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "videography", 
+      "name": "Videography",
+      "subcategories": [
+        {
+          "id": "wedding_video",
+          "name": "Wedding Videography",
+          "services": [
+            {"id": "wedding_highlight", "name": "Wedding Highlight Film", "base_price": 40000},
+            {"id": "full_coverage", "name": "Full Day Coverage", "base_price": 60000},
+            {"id": "cinematic_wedding", "name": "Cinematic Wedding Film", "base_price": 80000}
+          ]
+        },
+        {
+          "id": "corporate_video",
+          "name": "Corporate Videos",
+          "services": [
+            {"id": "promo_video", "name": "Promotional Video", "base_price": 25000},
+            {"id": "event_coverage", "name": "Event Coverage", "base_price": 20000}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "editing",
+      "name": "Editing Services",
+      "subcategories": [
+        {
+          "id": "photo_editing",
+          "name": "Photo Editing",
+          "services": [
+            {"id": "basic_editing", "name": "Basic Photo Editing", "base_price": 500},
+            {"id": "advanced_retouch", "name": "Advanced Retouching", "base_price": 1500},
+            {"id": "background_change", "name": "Background Change", "base_price": 1000}
+          ]
+        },
+        {
+          "id": "video_editing", 
+          "name": "Video Editing",
+          "services": [
+            {"id": "basic_edit", "name": "Basic Video Edit", "base_price": 5000},
+            {"id": "advanced_edit", "name": "Advanced Edit with Effects", "base_price": 15000},
+            {"id": "color_grading", "name": "Color Grading", "base_price": 8000}
+          ]
+        }
+      ]
+    }
+  ]
+}
