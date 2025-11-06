@@ -104,13 +104,21 @@ export default function Signup() {
   useEffect(() => {
     if (formData.serviceSearch) {
       const query = formData.serviceSearch.toLowerCase();
-      const {filteredServices.map((category: any) => (
+      const{filteredServices.map((category: { id: string; name: string; services?: any[] }) => (
+  <div
+    key={category.id}
+    className="border border-gray-200 dark:border-gray-600 rounded-lg p-4"
+  >
+    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+      {category.name}
+    </h4>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      {/* Render services here */}
+    </div>
+  </div>
+))}
 
-        category.name.toLowerCase().includes(query) ||
-        category.subcategories.some(sub => sub.toLowerCase().includes(query))
-      );
-      setFilteredServices(filtered);
-    } else {
+    else {
       setFilteredServices(serviceCategories);
     }
   }, [formData.serviceSearch]);
